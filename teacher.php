@@ -201,7 +201,7 @@
 .notes-btn:hover {
   color:#FFFFFF;
   background-color:#00acec;
-}
+} 
 .notes-btn-coloured:hover {
   color:#FFFFFF;
   background-color:#009FDB;

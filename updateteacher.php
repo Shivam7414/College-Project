@@ -2,6 +2,7 @@
  include 'dbconfig.php';
  session_start();
  $teacher_id=$_SESSION['teacher_id'];
+
  if(isset($_POST['update_teacher_profile'])){
 
     $update_name = mysqli_real_escape_string($conn, $_POST['teacher_name']);
@@ -15,7 +16,7 @@
     if(!empty($update_pass) || !empty($new_pass) || !empty($confirm_pass)){
        if($update_pass != $old_pass){
           echo "<script> 
-          alert(' Old password not match !');
+          alert(' Old password not match !'); 
           window.location.href='Teacherdashboard.php'; 
           </script>";
        }elseif($new_pass != $confirm_pass){
@@ -58,5 +59,3 @@
     }
  
  }
-
-?>

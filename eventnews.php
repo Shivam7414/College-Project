@@ -2,6 +2,16 @@
   include 'dbconfig.php';
   session_start();
   $teacher_id=$_SESSION['teacher_id'];
+  $teacher_id=$_SESSION['teacher_id'];
+  if (!isset($teacher_id)) {
+    header('location:userlogin.php');
+  };
+
+  if (isset($_GET['logout'])) {
+    unset($teacher_id);
+    session_destroy();
+    header('location:userlogin.php');
+  }
 
 ?>
 <!DOCTYPE html>
@@ -475,7 +485,7 @@
         </div>
         <ul>
 
-          <li><a href="#"><i class="fas fa-power-off"></i></a></li>
+          <li><a href="index.html?logout=<?php echo $teacher_id; ?>"><i class="fas fa-power-off"></i></a></li>
         </ul>
       </div>
     </div>
@@ -496,6 +506,13 @@
         <li class="item" id="profile">
           <a href="Teacherdashboard.php" class="menu-btn">
             <i class="fas fa-user-circle"></i><span>Profile</span>
+          </a>
+
+        </li>
+        <li class="item" id="profile">
+        <li class="item" id="profile">
+          <a href="Teacherviewdashboard.php" class="menu-btn">
+            <i class="fas fa-chart-line"></i><span>Dashboard</span>
           </a>
 
         </li>
