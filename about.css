@@ -1,0 +1,149 @@
+.content {
+  margin-top: 100px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: "Tiro Bangla", serif;
+
+}
+.dev {
+  height: 500px;
+  width: 1000px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  margin-top: 20px;
+  display: flex;
+  background-color: #252526;
+}
+.profile {
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+  height: 500px;
+  box-shadow:  rgba(0, 0, 0, 0.35) 6px 2px 10px 0px;
+}
+.info {
+  width: 700px;
+  height: 500px;
+  
+}
+.profileimg {
+  height: 100px;
+  width: 100px;
+}
+.circular--square {
+  width: 250px;
+  height: 250px;
+  position: relative;
+  top: 30px;
+  left: 23px;
+  object-fit: cover;
+  object-position: center;
+  box-shadow: inset 0 0 0 6px #4e4c4ce7;
+  border-top-left-radius: 50% 50%;
+  border-top-right-radius: 50% 50%;
+  border-bottom-right-radius: 50% 50%;
+  border-bottom-left-radius: 50% 50%;
+}
+.title {
+  margin-top: 130px;
+  text-align: center;
+  color: white;
+  font-family: "Tiro Bangla", serif;
+}
+.about{
+    margin: auto;
+    text-align: center;
+    color: aliceblue;
+    width: 500px;
+}
+.devname{
+    font-family: "Tiro Bangla", serif;
+    color: antiquewhite;
+    margin: auto;
+    position: relative;
+    top: -5px;
+    font-size: 25px;
+    text-decoration: underline;
+}
+.social-title{
+    color: whitesmoke;
+    margin: auto;
+    position: relative;
+}
+@import url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.css);
+
+
+.social-container {
+  width: 300px;
+  text-align: center;
+}
+
+.social-icons {
+  padding: 0;
+  list-style: none;
+  margin: 1em;
+}
+.social-icons li {
+  display: inline-block;
+  margin: 0.15em;
+  position: relative;
+  font-size: 1.2em;
+}
+.social-icons i {
+  color: #fff;
+  position: absolute;
+  top: 21px;
+  left: 21px;
+  transition: all 265ms ease-out;
+}
+.social-icons a {
+  display: inline-block;
+}
+.social-icons a:before {
+  transform: scale(1);
+  -ms-transform: scale(1);
+  -webkit-transform: scale(1);
+  content: " ";
+  width: 60px;
+  height: 60px;
+  border-radius: 100%;
+  display: block;
+  background: linear-gradient(45deg, #00b5f5, #002a8f);
+  transition: all 265ms ease-out;
+}
+.social-icons a:hover:before {
+  transform: scale(0);
+  transition: all 265ms ease-in;
+}
+.social-icons a:hover i {
+  transform: scale(2.2);
+  -ms-transform: scale(2.2);
+  -webkit-transform: scale(2.2);
+  color: #00b5f5;
+  background: -webkit-linear-gradient(45deg, #00b5f5, #002a8f);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  transition: all 265ms ease-in;
+}
+.info-title{
+    color: #5C5ADB;
+    margin-top: 50px;
+    text-align: center;
+    font-size: 30px;
+}
+.personal-details{
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 370px;
+    justify-content: space-around;
+}
+.personal-details p{
+   font-size: 20px;
+}
+.personal-details i{
+    color: #5C5ADB;
+}
+

@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <script src="https://kit.fontawesome.com/64d58efce2.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="Login/login.css" />
+  <link rel="stylesheet" href="css/all.min.css">
+  <style>
+    #login-form {
+      display: none;
+    }
+
+    .form-box {
+
+      width: 380px;
+      height: 480px;
+      position: relative;
+      margin: 18% auto;
+      background: 252526;
+      padding: 10px;
+      overflow: hidden;
+      margin-top: 100px;
+      border-radius: 15px;
+      box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+      backdrop-filter: blur(5px);
+
+    }
+
+    .button-box {
+      width: 295px;
+      margin: 50px auto;
+      position: relative;
+      box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+      border-radius: 30px;
+    }
+
+    .toggle-btn {
+      padding: 18px 30px;
+      cursor: pointer;
+      background: transparent;
+      color: white;
+      border: 0;
+      outline: none;
+      position: relative;
+    }
+
+    #loginbtn {
+      top: 0;
+      left: 0;
+      position: absolute;
+      width: 150px;
+      height: 100%;
+      background: dodgerblue;
+      border-radius: 30px;
+      transition: .5s;
+    }
+
+    .login-input-group {
+      top: 150px;
+      position: absolute;
+      width: 400px;
+      transition: .5s;
+    }
+
+    .login-input-group-Teacher {
+      top: 120px;
+      position: absolute;
+      width: 280px;
+      transition: .5s;
+    }
+
+    .login-input-field {
+      width: 100%;
+      padding: 10px 0;
+      margin: 15px 0;
+      border-left: 0;
+      border-top: 0;
+      border-right: 0;
+      border-bottom: 1px solid #999;
+      outline: none;
+      background: transparent;
+      font-size: 20px;
+    }
+
+    .submit-btn {
+      width: 85%;
+      padding: 10px 30px;
+      cursor: pointer;
+      display: block;
+      margin: auto;
+      background: dodgerblue;
+      border: 0;
+      outline: none;
+      border-radius: 30px;
+      color: white;
+      margin-top: 20px;
+    }
+
+    .check-box {
+      margin: 30px 10px 34px 0;
+    }
+
+    .register {
+      margin: 20px 0px 0px 8px;
+      text-align: center;
+      color: #fff;
+    }
+
+    .register a {
+      text-decoration: none;
+      color: white
+    }
+
+    .span {
+      color: #777;
+      font-size: 14px;
+      bottom: 106px;
+      position: absolute;
+    }
+
+    .span2 {
+      color: #777;
+      font-size: 14px;
+      bottom: 68px;
+      position: absolute;
+    }
+
+    #login {
+      left: -12px;
+    }
+
+    #login input {
+      color: white;
+      font-size: 15;
+    }
+
+    #Teacher {
+      left: 450px;
+    }
+
+    #Teacher input {
+      color: white;
+      font-size: 15;
+    }
+  </style>
+  <title>Sign in & Sign up Form</title>
+</head>
+
+<body>
+
+
+  <div class="container">
+    <div class="forms-container">
+      <div class="signin-signup">
+        <div class="sign-in-form">
+          <div class="form-box">
+            <div class='button-box'>
+              <div id='loginbtn'></div>
+              <button type='button' onclick='login()' class='toggle-btn'>Student Login</button>
+              <button type='button' onclick='Teacher()' class='toggle-btn'>Teacher Login</button>
+            </div>
+            <form id='login' class='login-input-group ' action="userlogin.php" method="post">
+              <input type='text' class='login-input-field' placeholder='Student username' name='stuname' required>
+              <input type='password' class='login-input-field' placeholder='Enter Password' name='password' required>
+              <button type='submit' class='submit-btn ' name='Studentlogin'>Log in</button>
+
+            </form>
+
+            <form id='Teacher' class='login-input-group'method='post' action="userlogin.php">
+              <input type='text' class='login-input-field' placeholder='Teacher' name="tname" required>
+              <input type='password' class='login-input-field' placeholder='Enter Password' name="tpass" required>
+              <button type='submit' class='submit-btn' name="teacherlogin">Log in</button>
+
+            </form>
+          </div>
+        </div>
+        <form action="register.php" method="post" class="sign-up-form" enctype="multipart/form-data">
+          <h2 class="title">Sign up</h2>
+          <div class="input-field">
+            <i class="fas fa-user"></i>
+            <input type="text" placeholder="Full Name" name="name" required />
+          </div>
+          <div class="input-field">
+            <i class="fas fa-user"></i>
+            <input type="text" placeholder="Username" name="username" required />
+          </div>
+          <div class="input-field">
+            <i class="fas fa-envelope"></i>
+            <input type="email" placeholder="Email" name="email" required />
+          </div>
+          <div class="input-field">
+            <i class="fas fa-lock"></i>
+            <input type="password" placeholder="Password" name="password" required />
+          </div>
+          <div class="input-field">
+            <i class="fas fa-lock"></i>
+            <input type="password" placeholder="Re-Enter Password" name="repassword" required />
+          </div>
+          <div class="input-field">
+            <i class="fas fa-phone"></i>
+            <input type="number" placeholder="+91" name="phoneno" required />
+          </div>
+          <input type="submit" class="btn" value="Sign up" name="submit" />
+
+        </form>
+      </div>
+    </div>
+
+    <div class="panels-container">
+      <div class="panel left-panel">
+        <div class="content">
+          <h3>New here ?</h3>
+          <p>
+            Please sign up in Student Ocean and join our community.
+          </p>
+          <button class="btn transparent" id="sign-up-btn">
+            Sign up
+          </button>
+         
+          <p style="margin-top: 30px;">
+             Visit Student Profile for Placement.
+          </p>
+          <button class="btn transparent" id="sign-up-btn" onclick="window.location.href='Placement.php'">
+            Click Here
+          </button>
+        </div>
+        <img src="Login/img/log.svg" class="image" alt="" />
+      </div>
+      <div class="panel right-panel">
+        <div class="content">
+          <h3>One of us ?</h3>
+          <p>
+            Login in Student Ocean
+          </p>
+          <button class="btn transparent" id="sign-in-btn">
+            Sign in
+          </button>
+        </div>
+        <img src="Login/img/register.svg" class="image" alt="" />
+      </div>
+    </div>
+  </div>
+
+  <script src="Login/app.js"></script>
+</body>
+
+</html>

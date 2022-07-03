@@ -1,0 +1,145 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scrollbar-width: normal;
+    scrollbar-color: red green;
+    scroll-behavior: smooth;
+}
+
+.semester-container {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    margin-top: 150px;
+    align-items: center;
+    font-family: 'Tiro Bangla', serif;
+    height: 2200px;
+
+}
+
+.semester-container .box {
+    position: relative;
+    padding: 40px;
+    width: 400px;
+    color: black;
+    background: #fff;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+    border-radius: 10px;
+    margin: 20px;
+    box-sizing: border-box;
+    overflow: hidden;
+    text-align: center;
+
+}
+
+.semester-container .box .icon {
+    position: relative;
+    width: 100px;
+    height: 60px;
+    color: #fff;
+    background: #2d2d30;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    border-radius: 50%;
+    transition: 1s;
+}
+
+
+.semester-container .box:nth-child(1):hover .icon {
+    box-shadow: 0 0 0 400px #2d2d30;
+}
+
+.semester-container .box .content {
+    position: relative;
+    z-index: 1;
+    transition: 0.5s;
+}
+
+.semester-container .box:hover .content {
+    color: white;
+}
+
+.semester-container .box:hover .icon {
+    color: black;
+    background-color: #fff;
+}
+.semester-container .box:hover {
+    border: 1px solid rgba(226, 214, 214, 0.24);
+}
+.subject {
+    margin-top: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    border-radius: 10px;
+    background-color: #2d2d30;
+    backdrop-filter: blur(2px);
+    box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+}
+
+.subject-unit {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    width: 750px;
+    margin: 20px;
+}
+
+.unit {
+    border: 1px solid rgba(226, 214, 214, 0.24);
+    box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+    margin-bottom: 5px;
+    border-radius: 5px;
+    height: 63px;
+}
+
+
+.button {
+    display: flex;
+    height: 60px;
+    padding: 0;
+    background: #252526;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    overflow: hidden;
+    font-family: "Quicksand", sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+    float: right;
+}
+
+.button:hover {
+    background: #3e3e42;
+}
+
+.button:active {
+    background: #2d2d30;
+}
+
+.button__text,
+.button__icon {
+    display: inline-flex;
+    align-items: center;
+    padding: 0 24px;
+    color: #fff;
+    height: 100%;
+}
+
+.button__icon {
+    font-size: 1.5em;
+    background: rgba(0, 0, 0, 0.08);
+}
+
+.text {
+    margin: 0%;
+    display: inline-flex;
+    color: white;
+    padding: 15px 0px 0px 30px;
+    font-size: 25px;
+}
