@@ -730,7 +730,9 @@ if (isset($_POST['update_profile'])) {
         <label for="input1">Link</label>
       </div>
       <div class="group">
-        <textarea type="textarea" rows="5" name="about" required  <?php echo $placement_fetch['about'] ?> ></textarea>
+        <textarea type="textarea" rows="5" name="about" required  >
+        <?php echo $placement_fetch['about'] ?>
+        </textarea>
         <span class="highlight"></span><span class="bar"></span>
         <label id="textskill">About yourself </label>
       </div>
