@@ -555,10 +555,11 @@ if (isset($_POST['update_profile'])) {
       width: 150px;
       border-radius: 49px;
       height: 49px;
+      font-size: 15px;
       font-weight: 500;
       text-transform: uppercase;
       position: relative;
-      left: 275px;
+      left: 340px;
     }
 
     .form3_btn {
@@ -572,10 +573,11 @@ if (isset($_POST['update_profile'])) {
       text-transform: uppercase;
       font-weight: 600;
       margin: 25px 0;
+      margin-left: 5px;
       cursor: pointer;
       transition: 0.5s;
       position: relative;
-      left: -90px;
+      left: -135px;
 
     }
 
@@ -588,6 +590,8 @@ if (isset($_POST['update_profile'])) {
       background-color: #4d84e2;
       color: white;
     }
+   
+    
   </style>
 </head>
 
@@ -644,17 +648,25 @@ if (isset($_POST['update_profile'])) {
       </form>
 
     </div>
+    <?php
+        $select = mysqli_query($conn, "SELECT * FROM `academic_info` WHERE student_id = '$user_id'") or die('query failed');
+      
+    
+        if (mysqli_num_rows($select) > 0) {
+           $acdmic_fetch = mysqli_fetch_assoc($select);
+        }
+    ?>
     <div class="form2">
       <span class="title2">Student Academic Information </span>
       <form action="studentdash.php" class="formbox" method="post" enctype="multipart/form-data">
         <div class="form-group">
           <span>Roll No</span>
-          <input class="form-field" type="number" placeholder="Enter your roll no" name="rollno" required>
+          <input class="form-field" type="number" placeholder="Enter your roll no" name="rollno" value="<?php echo $acdmic_fetch['rno'] ?>" required>
 
         </div>
         <div class="form-group">
           <span>Age</span>
-          <input class="form-field" type="number" placeholder="Enter your Age" name="age" maxlength='3' required>
+          <input class="form-field" type="number" placeholder="Enter your Age" name="age" max='25' value="<?php echo $acdmic_fetch['age'] ?>" required>
         </div>
         <div class="form-group">
           <span>Semester</span>
@@ -669,7 +681,10 @@ if (isset($_POST['update_profile'])) {
 
           </div>
         </div>
+       
         <input type="submit" value="Save" name='form2-save' class="form2_btn">
+       
+        
       </form>
     </div>
   </div>
@@ -687,43 +702,43 @@ if (isset($_POST['update_profile'])) {
       
     
          if (mysqli_num_rows($select) > 0) {
-            $fetch = mysqli_fetch_assoc($select);
+            $placement_fetch = mysqli_fetch_assoc($select);
          }
-         if ($fetch['profile'] == '') {
+         if ($placement_fetch['profile'] == '') {
             echo '<img src="img/default-avatar.jpg" class="profile">';
          } else {
-            echo '<img src="Studentimg/' . $fetch['profile'] . '">';
+            echo '<img src="Studentimg/' . $placement_fetch['profile'] . '">';
          }
       
       
         
          ?>
     <form action="studentdash.php" method="POST" class="placement" enctype="multipart/form-data">
-      <input type="file" name="image" class="box" accept="image/jpg, image/jpeg, image/png" id="upload" hidden />
+      <input type="file" name="image" class="box" accept="image/jpg, image/jpeg, image/png" id="upload"  hidden />
 
       <label for="upload" id="upload">Upload profile</label>
       <div class="text-input">
-        <input type="text" id="input1" placeholder="Enter your skills" name="skill" required>
+        <input type="text" id="input1" placeholder="Enter your skills" name="skill" required value=" <?php echo $placement_fetch['skill'] ?>">
         <label for="input1">Skills</label>
       </div>
       <div class="text-input">
-        <input type="text" id="input1" placeholder="Enter your location" name="location" required>
+        <input type="text" id="input1" placeholder="Enter your location" name="location" required  value=" <?php echo $placement_fetch['location'] ?>">
         <label for="input1">Location</label>
       </div>
       <div class="text-input">
-        <input type="text" id="input1" placeholder="Enter your linkdin link" name="link" required>
+        <input type="text" id="input1" placeholder="Enter your linkdin link" name="link" required  value=" <?php echo $placement_fetch['linkdin'] ?>">
         <label for="input1">Link</label>
       </div>
       <div class="group">
-        <textarea type="textarea" rows="5" name="about" required></textarea>
+        <textarea type="textarea" rows="5" name="about" required  <?php echo $placement_fetch['about'] ?> ></textarea>
         <span class="highlight"></span><span class="bar"></span>
         <label id="textskill">About yourself </label>
       </div>
-      <input type="file" name="resume" class="box" accept=".pdf" id="resume" hidden />
+      <input type="file" name="resume" class="box" accept=".pdf" id="resume" hidden  />
 
       <label for="resume" id="resume">Upload Resume</label>
       <input type="submit" value="Save" name='placement_save' class="form3_btn">
-
+      <input type="submit" value="update" name='placement_update' class="form3_btn">
     </form>
 
   </div>
