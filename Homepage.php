@@ -156,11 +156,11 @@
                 <button class="dropbtn">Study Resources</button>
                 <div class="dropdown-content">
                   <a href="./semester1.html">Semester-1</a>
-                  <a href="#">Semester-2</a>
-                  <a href="#">Semester-3</a>
-                  <a href="#">Semester-4</a>
-                  <a href="#">Semester-5</a>
-                  <a href="#">Semester-6</a>
+                  <a href="./semester2.html">Semester-2</a>
+                  <a href="./semester3.html">Semester-3</a>
+                  <a href="./semester4.html">Semester-4</a>
+                  <a href="./semester5.html">Semester-5</a>
+                  <a href="./semester6.html">Semester-6</a>
                 </div>
               </div>
               <li class="nav-item">

@@ -529,7 +529,7 @@
 
     <div class="main-container">
       <div class="profile-container">
-        <form action="eventnewscode.php"method="POST" class="profile" enctype="multipart/form-data">
+        <form action="notesuploadcode.php"method="POST" class="profile" enctype="multipart/form-data">
 
           <section class="input-content">
 
@@ -545,7 +545,7 @@
               <dl class="inputbox">
                 <dt class="inputbox-title">Description</dt>
                 <dd class="inputbox-content">
-                  <input id="input0" type="text" name="title" required />
+                  <input id="input0" type="text" name="desc" required />
                   <label for="input0">Description about notes</label>
                   <span class="underline"></span>
                 </dd>
@@ -555,7 +555,7 @@
             <dl class="inputbox">
               <dt class="inputbox-title">Select Category</dt>
               <div class="select">
-                <select name="category">
+                <select name="semester">
                   <option value="1">semester 1</option>
                   <option value="2">semester 2</option>
                   <option value="3">semester 3</option>
@@ -565,10 +565,10 @@
 
                 </select>
               </div>
-              <input type="submit" value="Save" class="btn" name="Save_news">
+              <input type="submit" value="Save" class="btn" name="Save_notes">
               <div class="upload-btn-wrapper">
-                <button class="upload-btn">Upload image</button>
-                <input type="file" accept=".pdf" name="image" />
+                <button class="upload-btn">Upload Notes</button>
+                <input type="file" accept=".pdf , .docx , .pptx" name="notes" />
 
               </div>
             
