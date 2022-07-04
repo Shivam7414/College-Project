@@ -19,7 +19,7 @@
 
 <head>
   <meta charset="utf-8">
-  <title>Sidebar Dashboard Template With Sub Menu</title>
+  <title>Teacherdashboard</title>
 
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0-2/css/all.min.css">
   <scrip src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" charset="utf-8">
@@ -422,8 +422,8 @@
         border-radius: 3px;
         height: 40px;
         position: relative;
-        left: -80px;
-        top: 28px;
+        left: 0px;
+        top: 8px;
         font-size: 20px;
       }
 
@@ -437,8 +437,8 @@
         position: relative;
         overflow: hidden;
         display: inline-block;
-        left: -35px;
-        top: 45px;
+        left: 14px;
+        top: 23px;
 
       }
 

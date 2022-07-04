@@ -152,7 +152,7 @@ if (isset($_POST['placement_update'])) {
   $update_resume_folder = 'resume/' . $update_resume;
 
   if (!empty($update_resume)) {
-    $resume_update_query = mysqli_query($conn, "UPDATE `placement` SET resume = ' $update_resume' WHERE student_id = '$user_id'") or die('query failed');
+    $resume_update_query = mysqli_query($conn, "UPDATE `placement` SET resume = '$update_resume' WHERE student_id = '$user_id'") or die('query failed');
     if ($resume_update_query) {
       move_uploaded_file($update_resume_tmp_name, $update_resume_folder);
     }

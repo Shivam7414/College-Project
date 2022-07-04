@@ -19,8 +19,8 @@ if (isset($_POST['Save_notes'])) {
     $notes_tmp_name = $_FILES['notes']['tmp_name'];
     $notes_folder = 'Teachernotes/'.$notes;
     
-        $query = mysqli_query($conn, "INSERT INTO `notesupload`(`notes_title`, `notes_desc`, `teacher_name`, `notesname`, `semester`) 
-        VALUES ('$title','$description',' $tname',' $notes',' $semester')") or die ("Query failed");
+        $query = mysqli_query($conn, "INSERT INTO `notesupload`(`notes_title`, `notes_desc`, `teacher_name`, `notesname`, `semester`,`teacher_id`) 
+        VALUES ('$title','$description',' $tname','$notes',' $semester','$teacher_id')") or die ("Query failed");
         if ($query) {
             move_uploaded_file($notes_tmp_name, $notes_folder);
             echo "<script> 
@@ -33,8 +33,4 @@ if (isset($_POST['Save_notes'])) {
                 window.location.href='eventnews.php'; 
                 </script>";
         }
-    
-    
-  
-
 }

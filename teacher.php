@@ -3,6 +3,15 @@
 include 'dbconfig.php';
 session_start();
 $user_id = $_SESSION['user_id'];
+if (!isset($user_id)) {
+    header('location:userlogin.php');
+  };
+
+  if (isset($_GET['logout'])) {
+    unset($user_id);
+    session_destroy();
+    header('location:userlogin.php');
+  }
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -221,14 +230,13 @@ $user_id = $_SESSION['user_id'];
         }
 
         .title {
-            padding: 10px;
+            padding: 5px;
             text-align: center;
-            font-size: 30px;
+            font-size: 20px;
             font-weight: 500;
         }
 
         .description {
-            padding: 10px;
             text-align: center;
             font-size: 15px;
             font-weight: 100;
@@ -287,7 +295,7 @@ $user_id = $_SESSION['user_id'];
                             </li>
                         </ul>
                         <div class="div-inline my-2 my-lg-0">
-                            <button class="header-btn my-5 my-sm-0" onclick="window.location.href='Login.html'">Login</button>
+                        <button class="header-btn my-5 my-sm-0" onclick="window.location.href='index.html? logout = <?php echo $user_id; ?>'">Logout</button>
                         </div>
                     </div>
                 </nav>
@@ -301,13 +309,6 @@ $user_id = $_SESSION['user_id'];
         <center>
             <p class="content-title">Semester- <?php echo $fetchsemster['sem'] ?>&nbsp; Notes</p>
         </center>
-        <?php
-           $selectnotes = mysqli_query($conn, "SELECT * FROM `academic_info` WHERE student_id = '$user_id'") or die('query failed');
-           if (mysqli_num_rows($selectnotes) > 0) {
-             $fetchsemster = mysqli_fetch_assoc($select);
-           }
-        ?>
-
         <div class="content">
             <?php
               $semster= $fetchsemster['sem'];
@@ -323,23 +324,19 @@ $user_id = $_SESSION['user_id'];
             <div class="data">
                 <div>
                     <p class="title"><?php echo $row['notes_title'] ?></p>
-                    <p class="description">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Magni est labore laudantium incidunt, dolorem, ipsam dicta natus facilis voluptatem distinctio rerum ut fugit, obcaecati placeat vero. Blanditiis nesciunt tenetur odit!</p>
-                    <p class="teachername">By Teachername</p>
+                    <p class="description"><?php echo $row['notes_desc'] ?></p>
+                    <p class="teachername">-By <?php echo $row['teacher_name'] ?></p>
                 </div>
                 <div class="inside-content">
-                    <a href="#" class="notes-btn-coloured btn-lg">Download</a>
+                    <a href="Teachernotes/<?php echo$row['notesname']?>" class="notes-btn-coloured btn-lg" target="_blank">Download</a>
+                    
                 </div>
             </div>
             <?php
         }
       }
       ?>
-
-
         </div>
-
-
-
     </div>
 </body>
 

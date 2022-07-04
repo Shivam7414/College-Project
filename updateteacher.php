@@ -27,7 +27,7 @@
        }else{
           mysqli_query($conn, "UPDATE `teacher` SET password = '$confirm_pass' WHERE id = '$teacher_id'") or die('query failed');
           echo "<script> 
-          alert('  password updated sucessfully !');
+          alert('password updated sucessfully !');
           window.location.href='Teacherdashboard.php'; 
           </script>";
        }

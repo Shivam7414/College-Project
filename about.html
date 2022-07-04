@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -40,6 +41,24 @@
   </head>
 
   <body>
+    <? php
+
+    include 'dbconfig.php';
+    session_start();
+    $user_id = $_SESSION['user_id'];
+  
+    if (!isset($user_id)) {
+      header('location:userlogin.php');
+    };
+  
+    if (isset($_GET['logout'])) {
+      unset($user_id);
+      session_destroy();
+      header('location:userlogin.php');
+    }
+  
+  
+    ?>
     <header class="header">
       <div class="header-inner">
         <div class="container-fluid px-lg-5">
@@ -86,7 +105,7 @@
                   </div>
                 </div>
                 <li class="nav-item">
-                  <a class="nav-link" href="#">Teacher</a>
+                  <a class="nav-link" href="./teacher.php">Teacher</a>
                 </li>
                 <li class="nav-item">
                   <a class="nav-link" href="./placement.php">Placement</a>
@@ -96,12 +115,7 @@
                 </li>
               </ul>
               <div class="div-inline my-2 my-lg-0">
-                <button
-                  class="header-btn my-5 my-sm-0"
-                  onclick="window.location.href='Login.html'"
-                >
-                  Login
-                </button>
+                < <button class="header-btn my-5 my-sm-0" onclick="window.location.href='index.html? logout = <?php echo $user_id; ?>'">Logout</button>
               </div>
             </div>
           </nav>
@@ -110,10 +124,8 @@
     </header>
     <h1 class="title">ABOUT &nbsp; DEVELOPER</h1>
     <div class="about">
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni iste
-      consectetur debitis, facere incidunt ea laudantium excepturi fugiat
-      reprehenderit provident harum labore eos et exercitationem dolorum esse,
-      accusantium laborum ratione.
+      Hello Everyone we are developer of Student Ocean.This website only for BCA students,If you want to give us any suggestion regarding this site, then you can contact us.
+     
     </div>
     <div class="content">
       <div class="dev" id="dev1" data-aos="fade-up"
@@ -139,7 +151,7 @@
                 <i class="fa fa-phone fa-2x"></i>
                 <p>Phone no</p>
                 <p>7414887589</p>
-                <i class="fa fa-map-marker fa-2x"></i>
+                <i class="fa fa-map-marker fa-2x"></i> 
                 <p>Location</p>
                 <p>Chopasni Housing Board jodhput(Raj)</p>
             </div>

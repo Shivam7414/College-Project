@@ -17,9 +17,13 @@
 
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
   <style>
+    
     body {
       font-family: 'Montserrat'sans-serif;
       background-color: #252526;
+    }
+    .dropdown-content{
+      min-width: 138px;
     }
 
     .main-content {
@@ -84,7 +88,7 @@
       width: auto;
       height: 50px;
       margin: 18px 3px;
-      color:#7C4DFF;
+      color:dodgerblue;
 
     }
 
@@ -161,7 +165,7 @@
                   <a href="./semester4.html">Semester-4</a>
                   <a href="./semester5.html">Semester-5</a>
                   <a href="./semester6.html">Semester-6</a>
-                  <a href="./oldpaper.html">Semester-6</a>
+                  <a href="./oldpaper.html">Old papers</a>
                 </div>
               </div>
               <li class="nav-item">
@@ -206,7 +210,7 @@
   </section>
   <div class="main-content">
     <center>
-      <p style="color: #5c5adb ;font-size:60px">COLLEGE NEWS</p>
+      <p style="color: #5c5adb ;font-size:60px">COLLEGE NEWS & EVENTS</p>
     </center>
     <?php
     $query = "SELECT  * from teacher  INNER JOIN eventnews on teacher.id=eventnews.tid ; ";

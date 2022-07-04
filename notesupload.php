@@ -6,7 +6,7 @@
   if (!isset($teacher_id)) {
     header('location:userlogin.php');
   };
-
+ 
   if (isset($_GET['logout'])) {
     unset($teacher_id);
     session_destroy();
@@ -19,7 +19,7 @@
 
 <head>
   <meta charset="utf-8">
-  <title>Sidebar Dashboard Template With Sub Menu</title>
+  <title>Teacherdashboard</title>
 
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0-2/css/all.min.css">
   <scrip src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" charset="utf-8">

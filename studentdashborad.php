@@ -590,6 +590,18 @@ if (isset($_POST['update_profile'])) {
       background-color: #4d84e2;
       color: white;
     }
+    .back_btn{
+      background-color: #2196F3;
+      color:white;
+      font-size: 20px;
+      height: 60px;
+      width: 200px;
+      margin-left: 10px;
+      border: none;
+      border-radius: 30px;
+      position: fixed;
+      top: 15px;
+    }
    
     
   </style>
@@ -611,6 +623,7 @@ if (isset($_POST['update_profile'])) {
     }
   }
   ?>
+  <button class="back_btn" onclick="window.location.href='Homepage.php'">Back-to-Home</button>
   <div class="dashborad-container">
     <div class="form1">
 
