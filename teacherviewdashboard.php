@@ -273,7 +273,7 @@
         </div>
         <ul>
 
-          <li><a href="#"><i class="fas fa-power-off"></i></a></li>
+          <li><a href="index.html?logout=<?php echo $teacher_id; ?>"><i class="fas fa-power-off"></i></a></li>
         </ul>
       </div>
     </div>
@@ -340,13 +340,12 @@
 
           </div>
           <div class="inside-content">
-            <a href="#" class="delete-btn-coloured btn-lg">Delete</a>
+                 
+           <a onclick="confirm('Are you sure to delete')" href= "delete.php?eventnews_id=<?php echo $row['event_id']; ?>" class="delete-btn-coloured btn-lg"> Delete </a>         
           </div>
         </div>
       
-
-
-      
+    
       <?php
         }
       }
