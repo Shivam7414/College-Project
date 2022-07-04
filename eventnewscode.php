@@ -12,8 +12,8 @@ if (isset($_POST['Save_news'])) {
     $title = mysqli_real_escape_string($conn, $_POST['title']);
     $description = mysqli_real_escape_string($conn, $_POST['description']);
     $category = mysqli_real_escape_string($conn, $_POST['category']);
-    $date = date("d/m/y l");
-    echo $date;
+    $date =date("Y-m-d");;
+
     $tid = $fetch['id'];
     $image = $_FILES['image']['name'];
     $image_size = $_FILES['image']['size'];

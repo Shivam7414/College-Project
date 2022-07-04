@@ -310,8 +310,8 @@ $user_id = $_SESSION['user_id'];
 
         <div class="content">
             <?php
-             
-              $query="SELECT  * from notesupload  ";
+              $semster= $fetchsemster['sem'];
+              $query="SELECT  * from notesupload where semester= $semster ";
               $query_run=mysqli_query($conn,$query);
               $fetch_data=mysqli_num_rows($query_run)>0;
               if ($fetch_data){
