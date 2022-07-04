@@ -161,6 +161,7 @@
                   <a href="./semester4.html">Semester-4</a>
                   <a href="./semester5.html">Semester-5</a>
                   <a href="./semester6.html">Semester-6</a>
+                  <a href="./oldpaper.html">Semester-6</a>
                 </div>
               </div>
               <li class="nav-item">
