@@ -1,6 +1,6 @@
 # College-Project
 
-#STUDENT
+# STUDENT
 
 1. Login Page
 
@@ -41,7 +41,7 @@
 
 
 
-#TEACHER
+# TEACHER
 
 
 1. Teacher Login
@@ -58,7 +58,8 @@
 
 4. Notes Upload Page
 
-![Screenshot (320)](https://user-images.githubusercontent.com/88272794/197194914-6480905a-2555-4cd2-9ebb-582c37aabeef.png)
+![Screenshot (319)](https://user-images.githubusercontent.com/88272794/197195432-65978f49-dc72-4af4-9d30-cb5d4e12a17c.png)
+
 
 5.  Event & News upload page
 
