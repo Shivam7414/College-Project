@@ -54,12 +54,11 @@
 
 3. Teacher Dashboard
 
-![Screenshot (319)](https://user-images.githubusercontent.com/88272794/197194729-eb8c0ab5-af7a-40f5-b9b2-06dbcf126d28.png)
+![Screenshot (326)](https://user-images.githubusercontent.com/88272794/197196275-35e48a60-ac18-4a25-aa0c-4eaa5a9f6792.png)
 
 4. Notes Upload Page
 
-![Screenshot (319)](https://user-images.githubusercontent.com/88272794/197195432-65978f49-dc72-4af4-9d30-cb5d4e12a17c.png)
-
+![Screenshot (320)](https://user-images.githubusercontent.com/88272794/197196010-19cd5edd-580e-49fd-b770-151fc3c0c6b3.png)
 
 5.  Event & News upload page
 
